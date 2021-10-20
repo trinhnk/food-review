@@ -13,6 +13,10 @@ def author(request):
     posts = Post.objects.filter(posted_by_id=author.id)
     return render(request, 'review/author.html', {'author': author, 'posts': posts})
 
+
+
+
+
 def post(request):
     # post = Post.objects.get()
     return render(request, 'review/post.html')
