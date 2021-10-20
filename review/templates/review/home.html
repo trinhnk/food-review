@@ -18,6 +18,7 @@
                 <h2><span>Review</span></h2>
             </div>
             <div class="card-columns listfeaturedtag">
+            
                 {% for post in posts %}
                     <div class="card" style="display:flex">
                         <div class="row">
@@ -38,7 +39,7 @@
                                             </span>
                                             <span class="author-meta">
                                             <span class="post-name"><a href="{% url 'author' %}">Steve</a></span><br/>
-                                            <span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+                                            <span class="post-date">{{ post.post_date }}</span><span class="dot"></span><span class="post-read">6 min read</span>
                                             </span>
                                             <span class="post-read-more">
                                                 <a href="post.html" title="Read Story">
@@ -54,6 +55,7 @@
                         </div>
                     </div>
                 {% endfor %}
+
             </div>
         </section>
         <!-- End Featured ================================================== -->
